@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane fx:id="mainTabPane" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.clubnautico.elbigua.controller.MainController">
+    <tabs>
+        <Tab text="Usuarios">
+            <content>
+                <fx:include source="UserView.fxml"/>
+            </content>
+        </Tab>
+        <Tab text="Embarcaciones">
+            <content>
+                <fx:include source="ShipView.fxml"/>
+            </content>
+        </Tab>
+        <Tab text="Vehículos">
+            <content>
+                <!-- Car management content -->
+            </content>
+        </Tab>
+        <Tab text="Navegación">
+            <content>
+                <!-- Navigation table content -->
+            </content>
+        </Tab>
+    </tabs>
+</TabPane>

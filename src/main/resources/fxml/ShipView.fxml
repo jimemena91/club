@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="10" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.clubnautico.elbigua.controller.ShipController">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <GridPane hgap="10" vgap="10">
+        <Label text="Usuario:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <ComboBox fx:id="userComboBox" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+        <Label text="Matrícula:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <TextField fx:id="registrationNumberField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+        <Label text="Fecha de Vencimiento:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <DatePicker fx:id="dueDatePicker" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+        <Label text="Tipo:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <TextField fx:id="typeField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+        <Label text="Color:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+        <TextField fx:id="colorField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+        <Label text="Capacidad:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+        <TextField fx:id="capacityField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+        <Label text="Marca:" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+        <TextField fx:id="brandField" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+        <Label text="Potencia (HP):" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+        <TextField fx:id="hpField" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+
+        <Label text="Nombre de Fantasía:" GridPane.columnIndex="0" GridPane.rowIndex="8" />
+        <TextField fx:id="fantasyNameField" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+
+        <Label text="Aseguradora:" GridPane.columnIndex="0" GridPane.rowIndex="9" />
+        <TextField fx:id="insurerField" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+
+        <Label text="Vencimiento del Seguro:" GridPane.columnIndex="0" GridPane.rowIndex="10" />
+        <DatePicker fx:id="dueDateInsurancePicker" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+
+        <Label text="Información Adicional:" GridPane.columnIndex="0" GridPane.rowIndex="11" />
+        <TextArea fx:id="infoArea" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+    </GridPane>
+
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <Button text="Agregar Embarcación" onAction="#handleAddShip" />
+    </HBox>
+
+    <TableView fx:id="shipTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn text="Matrícula" />
+            <TableColumn text="Tipo" />
+            <TableColumn text="Nombre de Fantasía" />
+            <TableColumn text="Usuario" />
+            <TableColumn text="Vencimiento" />
+        </columns>
+    </TableView>
+</VBox>
